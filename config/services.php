@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'medical_trust' => [
+        'url' => env('MEDICAL_TRUST_URL'),
+        'token' => env('MEDICAL_TRUST_TOKEN'),
+    ],
+
 ];
