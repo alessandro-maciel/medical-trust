@@ -1,0 +1,19 @@
+{
+    "id": "1234-1234-1234-1234",
+    "treatments": {
+      "crowns": [
+        {
+            "material": "porcelain",
+            "location": "L12",
+            "implemented": "2022-07-10"
+        }
+      ],
+      "fillings": [
+        {
+            "material": "white",
+            "location": "R8",
+            "implemented": "2022-07-10"
+        }
+      ]
+    }
+  }
