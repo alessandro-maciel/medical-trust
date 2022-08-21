@@ -4,6 +4,7 @@ namespace App\Services\MedicalTrust\Resources;
 
 use Illuminate\Http\Client\Response;
 use App\Services\MedicalTrust\MedicalTrustService;
+use App\Services\MedicalTrust\Requests\NewDentalTreatment;
 
 class DentalResource
 {
@@ -20,12 +21,12 @@ class DentalResource
         );
     }
 
-    public function addRecord(string $identifier, array $data = []): Response
+    public function addRecord(string $identifier, NewDentalTreatment $request): Response
     {
         return $this->service->post(
             request: $this->service->buildRequestWithToken(),
             url: "/dental/{$identifier}/records",
-            payload: $data,
+            payload: $request->toArray(),
         );
     }
 }
