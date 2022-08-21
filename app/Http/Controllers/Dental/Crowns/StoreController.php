@@ -20,7 +20,7 @@ class StoreController extends Controller
         $patient = $request->get('patient');
         $data = $request->validated();
 
-        $newDentalTreatment = $this->factory->make($data);
+        $newDentalTreatment = $this->factory->make($data)->validate();
 
         return $this->api->addRecord(
             identifier: $patient,
